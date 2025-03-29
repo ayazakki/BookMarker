@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" id="viewPort" content="width=device-width, initial-scale=1.0">
+  <title>Bookmark</title>
+  <link rel="shortcut icon" href="./Images/star.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./CSS/bootstrap.min.css">
+  <link rel="stylesheet" href="./CSS/all.min.css">
+  <link rel="stylesheet" href="./CSS/style.css">
+</head>
+
+<body>
+
+    <main>
+      <div class="container mx-auto text-center pt-3 mt-5">
+        <h1 >Bookmarker</h1>
+        <br/><br/>
+        <div class="bookmark-body">
+          <h2 class=""><i class="fa-solid fa-bookmark me-2"></i>Bookmark your favorite sites<i class="fa-solid fa-bookmark ms-2"></i></h2>
+          <div class="text-start mt-4">
+            <div class="mb-3">
+              <label for="bookMarkName" class="form-label fw-bold"><i class="fa-solid fa-book-bookmark me-1"></i> Site Name</label>
+              <input type="text" class="form-control" id="bookMarkName" placeholder="Bookmark Name">
+            </div>
+            <div class="mb-3">
+              <label for="websiteUrl" class="form-label fw-bold mt-3"><i class="fa-solid fa-link me-1"></i> Site URL</label>
+              <input type="url" class="form-control" id="websiteUrl" placeholder="Website URL">
+            </div>
+          </div>
+          <button id="submitBtn" class="submit btn text-white mt-3 mb-2">Submit</button>
+          <button id="updateBtn" class="update btn text-white mt-3 mb-2 d-none"><i class="fa-solid fa-pen-to-square me-2"></i>Update</button>
+        </div>
+        <input type="search" class="form-control mt-5" id="searchInput" placeholder="search for your book mark">
+        <div class="">
+          <table class="table mt-4 table-light align-middle ">
+            <thead>
+              <tr>
+                <th scope="col">index</th>
+                <th scope="col">Website Name</th>
+                <th scope="col">Visit</th>
+                <th scope="col">Update</th>
+                <th scope="col">Delete</th>
+              </tr>
+            </thead>
+            <tbody>
+              
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="./JS/main.js"></script>
+</body>
+
+</html>

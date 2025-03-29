@@ -1,0 +1,86 @@
+:root{
+  --theme-color:#FEC260;
+  --input-border-color:#d99c39;
+  --input-shadow-color:#fec26055;
+  --theme-bg:#f7ecde;
+  --btn-submit-bg:#d1512d;
+  --btn-submit-hover:#a93819;
+  --btn-visit-bg:#9eb23b;
+  --btn-visit-hover:#8a9e23;
+  --default-dark-color:black;
+  --h2-first-color:#3fa55b;
+  --h2-second-color:#b2ac49;
+  --btn-update-bg:#ef7a1a;
+  --btn-update-hover:#e46e0d;
+}
+::selection{
+  background-color: var(--theme-color);
+  color: var(--default-dark-color);
+}
+body{
+  font-family: "PT Sans Caption", sans-serif;
+  background-color: var(--theme-bg);
+}
+h1{
+  font-family: "Pacifico", cursive;
+  position: relative;
+  display: inline-block;
+  font-size: 3.125rem;
+  margin-bottom: 1.875rem;
+}
+h1::after{
+  position: absolute;
+  content: "";
+  left:0;
+  bottom: 0;
+  width: 100%;
+  height: 40%;
+  background-color: var(--theme-color);
+  z-index: -1;
+  transition: height 0.6s;
+}
+h1:hover::after{
+  height: 65%;
+}
+.bookmark-body{
+  border-width: .125rem 0 .125rem 0;
+  border-style: dotted;
+  padding-block: 1.25rem;
+}
+h2{
+  font-family: "Righteous", sans-serif;
+  background: linear-gradient(to right, var(--h2-first-color) 0% 46% , var(--h2-second-color) 56% 100% );
+  background-clip:text;
+  color: transparent;
+  font-size: 1.5625rem;
+}
+.form-control:focus{
+  border-color: var(--input-border-color);
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem var(--input-shadow-color);
+}
+.submit{
+  width: 9.375rem;
+  background-color: var(--btn-submit-bg);
+  transition: background-color 0.5s;
+}
+.submit:hover{
+  background-color:var(--btn-submit-hover) ;
+}
+.visit{
+  background-color: var(--btn-visit-bg) ;
+  transition:background-color 0.5s ;
+}
+.visit:hover{
+  background-color: var(--btn-visit-hover);
+}
+.fa-stack.small {
+  font-size: .625rem;
+}
+.update{
+  background-color: var(--btn-update-bg);
+  transition:background-color 0.5s ;
+}
+.update:hover{
+  background-color: var(--btn-update-hover);
+}
