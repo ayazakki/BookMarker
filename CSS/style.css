@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 :root{
   --theme-color:#FEC260;
   --input-border-color:#d99c39;
@@ -12,6 +19,10 @@
   --h2-second-color:#b2ac49;
   --btn-update-bg:#ef7a1a;
   --btn-update-hover:#e46e0d;
+}
+::-moz-selection{
+  background-color: var(--theme-color);
+  color: var(--default-dark-color);
 }
 ::selection{
   background-color: var(--theme-color);
@@ -37,6 +48,8 @@ h1::after{
   height: 40%;
   background-color: var(--theme-color);
   z-index: -1;
+  -webkit-transition: height 0.6s;
+  -o-transition: height 0.6s;
   transition: height 0.6s;
 }
 h1:hover::after{
@@ -49,19 +62,25 @@ h1:hover::after{
 }
 h2{
   font-family: "Righteous", sans-serif;
+  background: -webkit-gradient(linear, left top, right top, from(var(--h2-first-color)) , color-stop(56%, var(--h2-second-color)) );
+  background: -o-linear-gradient(left, var(--h2-first-color) 0% 46% , var(--h2-second-color) 56% 100% );
   background: linear-gradient(to right, var(--h2-first-color) 0% 46% , var(--h2-second-color) 56% 100% );
-  background-clip:text;
+  -webkit-background-clip:text;
+          background-clip:text;
   color: transparent;
   font-size: 1.5625rem;
 }
 .form-control:focus{
   border-color: var(--input-border-color);
   outline: 0;
-  box-shadow: 0 0 0 0.25rem var(--input-shadow-color);
+  -webkit-box-shadow: 0 0 0 0.25rem var(--input-shadow-color);
+          box-shadow: 0 0 0 0.25rem var(--input-shadow-color);
 }
 .submit{
   width: 9.375rem;
   background-color: var(--btn-submit-bg);
+  -webkit-transition: background-color 0.5s;
+  -o-transition: background-color 0.5s;
   transition: background-color 0.5s;
 }
 .submit:hover{
@@ -69,6 +88,8 @@ h2{
 }
 .visit{
   background-color: var(--btn-visit-bg) ;
+  -webkit-transition:background-color 0.5s ;
+  -o-transition:background-color 0.5s ;
   transition:background-color 0.5s ;
 }
 .visit:hover{
@@ -79,6 +100,8 @@ h2{
 }
 .update{
   background-color: var(--btn-update-bg);
+  -webkit-transition:background-color 0.5s ;
+  -o-transition:background-color 0.5s ;
   transition:background-color 0.5s ;
 }
 .update:hover{
