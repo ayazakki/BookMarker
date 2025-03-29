@@ -12,7 +12,7 @@ submitBtn.addEventListener("click", function () {
   if (validation("bookMarkName") && validation("websiteUrl")) {
     for(var i=0;i<bookMarks.length;i++){
       var isDuplicate=false;
-      if(bookMarks[i].bookMarkName.toLowerCase()===bookMarkName.value.toLowerCase()){
+      if(bookMarks[i].bookMarkName.toLowerCase()===bookMarkName.value.toLowerCase() ||bookMarks[i].websiteUrl===websiteUrl.value){
         isDuplicate=true
         Swal.fire({
           icon: "info",
@@ -63,10 +63,10 @@ submitBtn.addEventListener("click", function () {
             <span class="fs-6 text-black">Site URL must be a valid one, like :</span>
             <ul class="fs-6 text-black mt-3 list-unstyled ps-4 ms-2"> 
             <li class="mb-2">https://www.google.com </li> 
+            <li class="mb-2">http://www.google.com </li> 
             <li class="mb-2">http://facebook.com </li>  
-            <li class="mb-2">getbootstrap.com/ </li> 
+            <li class="mb-2">https://getbootstrap.com/ </li> 
             <li class="mb-2">https://my-site.org/news</li> 
-            <li class="mb-2">abc.com</li>  
             </ul>
           </div>
         </div>
@@ -120,7 +120,7 @@ function validation(idInput) {
       break;
     case "websiteUrl":
       regex =
-        /^(https:\/\/|http:\/\/)?(www\.)?[a-zA-Z0-9\-]{2,}\.[a-zA-Z]{2,}(\/[a-zA-Z0-9\-]*)?$/;
+        /^(https:\/\/|http:\/\/)(www\.)?[a-zA-Z0-9\-]{2,}\.[a-zA-Z]{2,}(\/[a-zA-Z0-9\-]*)?$/;
       break;
   }
   var testString = currentInput.value;
