@@ -24,21 +24,22 @@
         <br/><br/>
         <div class="bookmark-body">
           <h2 class=""><i class="fa-solid fa-bookmark me-2"></i>Bookmark your favorite sites<i class="fa-solid fa-bookmark ms-2"></i></h2>
-          <div class="text-start mt-4">
-            <div class="mb-3">
-              <label for="bookMarkName" class="form-label fw-bold"><i class="fa-solid fa-book-bookmark me-1"></i> Site Name</label>
-              <input type="text" class="form-control" id="bookMarkName" placeholder="Bookmark Name">
+          <form>
+            <div class="text-start mt-4">
+              <div class="mb-3">
+                <label for="bookMarkName" class="form-label fw-bold"><i class="fa-solid fa-book-bookmark me-1"></i> Site Name</label>
+                <input type="text" class="form-control" id="bookMarkName" placeholder="Bookmark Name">
+              </div>
+              <div class="mb-3">
+                <label for="websiteUrl" class="form-label fw-bold mt-3"><i class="fa-solid fa-link me-1"></i> Site URL</label>
+                <input type="url" class="form-control" id="websiteUrl" placeholder="Website URL">
+              </div>
             </div>
-            <div class="mb-3">
-              <label for="websiteUrl" class="form-label fw-bold mt-3"><i class="fa-solid fa-link me-1"></i> Site URL</label>
-              <input type="url" class="form-control" id="websiteUrl" placeholder="Website URL">
-            </div>
-          </div>
-          <button id="submitBtn" class="submit btn text-white mt-3 mb-2">Submit</button>
-          <button id="updateBtn" class="update btn text-white mt-3 mb-2 d-none"><i class="fa-solid fa-pen-to-square me-2"></i>Update</button>
+            <button id="submitBtn" class="submit btn text-white mt-3 mb-2">Submit</button>
+            <button id="updateBtn" class="update btn text-white mt-3 mb-2 d-none"><i class="fa-solid fa-pen-to-square me-2"></i>Update</button>
+          </form>
         </div>
         <input type="search" class="form-control mt-5" id="searchInput" placeholder="search for your book mark">
-        <div class="">
           <table class="table mt-4 table-light align-middle ">
             <thead>
               <tr>
@@ -53,7 +54,6 @@
               
             </tbody>
           </table>
-        </div>
       </div>
     </main>
 

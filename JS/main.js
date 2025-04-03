@@ -197,3 +197,6 @@ function updateViewPort(){
 }
 window.addEventListener('load', updateViewPort);
 window.addEventListener('resize', updateViewPort);
+document.querySelector("form").addEventListener("submit",function(e){
+  e.preventDefault()
+})
